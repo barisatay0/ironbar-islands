@@ -1,0 +1,72 @@
+// =============================================================================
+// Ironbar Configuration
+// Modern Floating Island Bar (Catppuccin Mocha)
+// =============================================================================
+
+{
+    // --- Bar Geometry & Display Settings ---
+    position = "top"
+    height = 36
+    margin.top = 6
+    margin.left = 10
+    margin.right = 10
+    icon_theme = "Papirus"
+
+    // --- Left Section: Workspaces ---
+    start = [
+        {
+            type = "workspaces"
+            all_monitors = false
+        }
+    ]
+
+    // --- Center Section: Clock & Date ---
+    center = [
+        {
+            type = "clock"
+            format = "󰥔 %H:%M  󰃭 %a %d %b"
+        }
+    ]
+
+    // --- Right Section: System Metrics & Tray ---
+    end = [
+        // System Resource Utilization (CPU & RAM)
+        {
+            type = "sys_info"
+            class = "sys-info"
+            interval.cpu = 3
+            interval.memory = 5
+            format = [
+                " {cpu_percent}%"
+                "󰘚 {memory_percent}%"
+            ]
+        }
+
+        // Audio Management (PipeWire / PulseAudio)
+        {
+            type = "volume"
+            format = "{icon} {percentage}%"
+            mute_format = "{icon} {percentage}%"
+            icons = {
+                volume = "󰕾"
+                muted = "󰝟"
+                mic_volume = ""
+                mic_muted = ""
+            }
+            max_volume = 100
+        }
+
+        // Battery Status
+        {
+            type = "battery"
+            show_icon = false
+            format = "󰁹 {percentage}%"
+        }
+
+        // System Tray (StatusNotifierItem)
+        {
+            type = "tray"
+            icon_size = 16
+        }
+    ]
+}
