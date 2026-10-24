@@ -56,11 +56,22 @@
             max_volume = 100
         }
 
-        // Battery Status
+        // Battery Status (requires upower daemon)
         {
             type = "battery"
+            class = "battery"
             show_icon = false
             format = "󰁹 {percentage}%"
+            profiles = {
+                charging = {
+                    when = { charging = true }
+                    format = "󰂄 {percentage}%"
+                }
+                low = {
+                    when = { percent = 20.0 }
+                    format = "󰂃 {percentage}%"
+                }
+            }
         }
 
         // System Tray (StatusNotifierItem)

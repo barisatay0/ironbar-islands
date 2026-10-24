@@ -23,6 +23,7 @@ Ensure the following packages are installed on your system:
 | [JetBrainsMono Nerd Font](https://www.nerdfonts.com/) | Icons and monospace typography | `ttf-jetbrains-mono-nerd` |
 | [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) | System tray icons | `papirus-icon-theme` |
 | PipeWire / PulseAudio | Volume and microphone status | `pipewire` / `pipewire-pulse` |
+| [UPower](https://upower.freedesktop.org/) | Battery status and power management daemon | `upower` |
 
 ## Installation
 

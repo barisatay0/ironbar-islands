@@ -235,10 +235,29 @@ button {
     background-color: rgba(249, 226, 175, 0.12);
 }
 
+.battery button {
+    background: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    color: inherit;
+    padding: 0;
+}
+
+.battery button:hover {
+    background: transparent;
+    background-color: transparent;
+}
+
 .battery.low,
 .battery.critical {
     color: @red;
     background-color: rgba(243, 139, 168, 0.15);
+}
+
+.battery.charging {
+    color: @teal;
 }
 
 /* =============================================================================
